@@ -35,6 +35,7 @@ def identify_anchors(structure_file,output_file):
     # Identify P2
     x, y, z = p1.position
     all_within_12A = u.select_atoms(f'protein and (name CA or name C or name N) and point {x} {y} {z} 12')
+    all_within_8A = u.select_atoms(f'protein and (name CA or name C or name N) and point {x} {y} {z} 8')
     shell_8_12A = [atom for atom in all_within_12A if atom not in all_within_8A]
     
     filtered_p2 = filter_atoms_by_angle(l1_position, p1.position, shell_8_12A)
