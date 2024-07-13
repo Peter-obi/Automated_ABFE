@@ -1,7 +1,3 @@
-"""
-This module provides functionality to define restraints for ABFE calculations using OpenMM.
-"""
-
 import openmm as mm
 import openmm.unit as unit
 
